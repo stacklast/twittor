@@ -136,6 +136,22 @@ postBtn.on('click', function() {
 
 });
 
+function enviarNotificacion(){
+
+    const notificationOpt = {
+        body : 'este es el cuerpo de la notificacion',
+        icon: 'img/icons/icon-72x72.png'
+    };
+
+    const n = new Notification('Hola Mundo', notificationOpt);
+
+    n.onclick = ()=>{
+        console.log('click');
+    };
+
+
+}
+
 function notificarme(){
 
     if(!window.Notification){
