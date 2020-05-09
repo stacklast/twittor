@@ -7,7 +7,7 @@ if(navigator.serviceWorker){
     if(url.includes('localhost')){
         swlocation = '/sw.js';
     }
-    
+
     navigator.serviceWorker.register(swlocation);
 }
 
@@ -135,3 +135,28 @@ postBtn.on('click', function() {
     crearMensajeHTML( mensaje, usuario );
 
 });
+
+function notificarme(){
+
+    if(!window.Notification){
+        console.log('Este navegador no soporta notificaciones');
+        return;
+    }
+
+    if(Notification.permission === 'granted'){
+        new Notification('Hola MUndo Granted');
+    }
+    
+    else if (Notification.permission == 'denied' || Notification.permission == 'default'){
+        Notification.requestPermission( function(permission){
+            
+            console.log(permission);
+            
+            if(permission == 'granted'){
+                new Notification('Hola MUndo pregunta');
+            }
+        });
+    }
+}
+
+notificarme();
