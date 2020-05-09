@@ -137,7 +137,7 @@ postBtn.on('click', function() {
 });
 
 function enviarNotificacion(){
-
+    console.log('enviando');
     const notificationOpt = {
         body : 'este es el cuerpo de la notificacion',
         icon: 'img/icons/icon-72x72.png'
