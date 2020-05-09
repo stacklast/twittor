@@ -9,7 +9,7 @@ const INMUTABLE_CACHE  = 'inmutable-v2';
 
 //corazon de la aplicacion
 const APP_SHELL = [
-    '/',
+    //'/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
