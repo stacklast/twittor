@@ -160,7 +160,7 @@ function notificarme(){
     }
 
     if(Notification.permission === 'granted'){
-        new Notification('Hola MUndo Granted');
+        enviarNotificacion();
     }
     
     else if (Notification.permission == 'denied' || Notification.permission == 'default'){
@@ -169,7 +169,7 @@ function notificarme(){
             console.log(permission);
             
             if(permission == 'granted'){
-                new Notification('Hola MUndo pregunta');
+                enviarNotificacion();
             }
         });
     }
